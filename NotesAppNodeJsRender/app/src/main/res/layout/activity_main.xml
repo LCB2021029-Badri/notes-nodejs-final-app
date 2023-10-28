@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="match_parent"
+        android:layout_toRightOf="@id/btn_search"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_toStartOf="@id/btn_search"
+        android:hint="Filter by user email"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:id="@+id/btn_search"
+        android:layout_alignParentEnd="true"
+        android:layout_width="wrap_content"
+        android:layout_above="@id/recyclerView"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_alignParentTop="true"
+        android:layout_height="wrap_content"
+        android:text="Search" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="8dp"
+        android:layout_height="0dp"
+        android:layout_below="@id/textInputLayout"
+        android:layout_above="@id/ll1" />
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_get"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Get" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_create"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Create" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_delete"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Delete"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</RelativeLayout>
